@@ -32,10 +32,12 @@ const JobListing = () => {
 
   useEffect(() => {
     const matchesCategory = (job) =>
-      selectedCategories.length === 0 || selectedCategories.includes(job.category);
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(job.category);
 
     const matchesLocation = (job) =>
-      selectedLocations.length === 0 || selectedLocations.includes(job.location);
+      selectedLocations.length === 0 ||
+      selectedLocations.includes(job.location);
 
     const matchesTitle = (job) =>
       searchFilter.title === "" ||
@@ -125,7 +127,9 @@ const JobListing = () => {
 
         {/* Location Filter */}
         <div className={showFilter ? "" : "max-lg:hidden"}>
-          <h4 className="font-medium text-lg py-4 pt-14">Search by Locations</h4>
+          <h4 className="font-medium text-lg py-4 pt-14">
+            Search by Locations
+          </h4>
           <ul className="space-y-4 text-gray-600">
             {JobLocations.map((location, index) => (
               <li className="flex gap-3 items-center" key={index}>
@@ -148,16 +152,23 @@ const JobListing = () => {
           Latest jobs
         </h3>
         <p className="mb-8">Get your desired job from top companies</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-          {filteredJobs
-            .slice((currentPage - 1) * 6, currentPage * 6)
-            .map((job, index) => (
-              <JobCard key={index} job={job} />
-            ))}
-        </div>
+
+        {filteredJobs.length === 0 ? (
+          <p className="text-gray-500">
+            No jobs found. Try adjusting your filters.
+          </p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+            {filteredJobs
+              .slice((currentPage - 1) * 6, currentPage * 6)
+              .map((job) => (
+                <JobCard key={job._id} job={job} />
+              ))}
+          </div>
+        )}
 
         {/* Pagination */}
-        {filteredJobs.length > 0 && (
+        {filteredJobs.length > 6 && (
           <div className="flex items-center justify-center space-x-2 mt-10">
             <a href="#job-list">
               <img
