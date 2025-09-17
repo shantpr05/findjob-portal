@@ -59,12 +59,36 @@ const Hero = () => {
       </div>
       <div className="overflow-hidden border border-gray-300 shadow-md mx-2 mt-5 p-6 rounded-md">
         <div className="animate-scroll flex gap-10 items-center">
-          <img className="h-6 transition-transform duration-300 hover:scale-110" src={assets.microsoft_logo} alt="Microsoft" />
-          <img className="h-6 transition-transform duration-300 hover:scale-110" src={assets.walmart_logo} alt="Walmart" />
-          <img className="h-6 transition-transform duration-300 hover:scale-110" src={assets.accenture_logo} alt="Accenture" />
-          <img className="h-6 transition-transform duration-300 hover:scale-110" src={assets.samsung_logo} alt="Samsung" />
-          <img className="h-6 transition-transform duration-300 hover:scale-110" src={assets.amazon_logo} alt="Amazon" />
-          <img className="h-6 transition-transform duration-300 hover:scale-110" src={assets.adobe_logo} alt="Adobe" />
+          <img
+            className="h-6 transition-transform duration-300 hover:scale-110"
+            src={assets.microsoft_logo}
+            alt="Microsoft"
+          />
+          <img
+            className="h-6 transition-transform duration-300 hover:scale-110"
+            src={assets.walmart_logo}
+            alt="Walmart"
+          />
+          <img
+            className="h-6 transition-transform duration-300 hover:scale-110"
+            src={assets.accenture_logo}
+            alt="Accenture"
+          />
+          <img
+            className="h-6 transition-transform duration-300 hover:scale-110"
+            src={assets.samsung_logo}
+            alt="Samsung"
+          />
+          <img
+            className="h-6 transition-transform duration-300 hover:scale-110"
+            src={assets.amazon_logo}
+            alt="Amazon"
+          />
+          <img
+            className="h-6 transition-transform duration-300 hover:scale-110"
+            src={assets.adobe_logo}
+            alt="Adobe"
+          />
         </div>
       </div>
     </div>

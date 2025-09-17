@@ -1,7 +1,9 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { useNavigate } from "react-router-dom";
 
 const JobCard = ({ job }) => {
+  const navigate = useNavigate();
   return (
     <div className="border p-6 shadow rounded hover:shadow-lg transition">
       {/* Company Logo + Bookmark */}
@@ -38,10 +40,22 @@ const JobCard = ({ job }) => {
 
       {/* Actions */}
       <div className="mt-4 flex gap-4 text-sm">
-        <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        <button
+          onClick={() => {
+            navigate(`/apply-job/${job._id}`);
+            scrollTo(0, 0);
+          }}
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
           Apply now
         </button>
-        <button className="text-gray-600 border border-gray-400 px-4 py-2 rounded hover:bg-gray-100">
+        <button
+          onClick={() => {
+            navigate(`/apply-job/${job._id}`);
+            scrollTo(0, 0);
+          }}
+          className="text-gray-600 border border-gray-400 px-4 py-2 rounded hover:bg-gray-100"
+        >
           Learn more
         </button>
       </div>
