@@ -1,12 +1,52 @@
-# React + Vite
+FindJob Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FindJob Portal is a modern web application that helps job seekers explore and apply for jobs easily. It features a clean, responsive interface and a smooth job search experience.
 
-Currently, two official plugins are available:
+🔗 Live Demo: findjobportal.netlify.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
 
-## Expanding the ESLint configuration
+Browse available job listings
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Search and filter jobs by category, location, and skills
+
+View detailed job descriptions
+
+Rich text job description editor
+
+User authentication and management with Clerk
+
+Responsive design for desktop and mobile
+
+Technical Stack
+Frontend
+
+React – UI development
+
+React Router DOM – Client-side routing
+
+React Toastify – Notifications
+
+Quill – Rich text editor
+
+Moment.js – Date and time formatting
+
+Clerk React – Authentication
+
+Styling
+
+Tailwind CSS – Utility-first CSS framework
+
+PostCSS & Autoprefixer – CSS processing and vendor prefixing
+
+Build & Development
+
+Vite – Development server and bundler
+
+ESLint – Code linting
+
+eslint-plugin-react-hooks – React hooks linting
+
+Deployment
+
+Netlify – Hosting and deployment
